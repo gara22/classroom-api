@@ -156,7 +156,9 @@ router.get('/users/:id', [ checkAuth.checkAuth ], (req, res) => {
 		);
 });
 
-router.get('/all', [ checkAuth.checkAuth, checkAuth.checkAdmin ], (req, res) => {
+router.get('/all',
+  //  [ checkAuth.checkAuth, checkAuth.checkAdmin ],
+  (req, res) => {
 	const pageSize = +req.query.pageSize;
 	const currentPage = +req.query.page;
 	const upcoming = +req.query.upcoming;
